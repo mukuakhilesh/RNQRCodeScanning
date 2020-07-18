@@ -61,12 +61,12 @@ class Scan extends Component {
     }
     render() {
         const { scan, ScanResult, result } = this.state
-        const desccription = 'QR code (abbreviated from Quick Response Code) is the trademark for a type of matrix barcode (or two-dimensional barcode) first designed in 1994 for the automotive industry in Japan. A barcode is a machine-readable optical label that contains information about the item to which it is attached. In practice, QR codes often contain data for a locator, identifier, or tracker that points to a website or application. A QR code uses four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to store data efficiently; extensions may also be used.'
+        const desccription = 'Welcome to Inventory Management APP.\n Hope, your shopping was delightful.\n\n Scan the QR in Merchants APP to Pay.'
         return (
             <View style={styles.scrollViewStyle}>
                 <Fragment>
                     <StatusBar barStyle="dark-content" />
-                    <Text style={styles.textTitle}>Welcome To React-Native QR Code Tutorial !</Text>
+                    <Text style={styles.textTitle}>Inventory_Managemet_APP</Text>
                     {!scan && !ScanResult &&
                         <View style={styles.cardView} >
                             <Text numberOfLines={8} style={styles.descText}>{desccription}</Text>
@@ -80,7 +80,7 @@ class Scan extends Component {
 
                     {ScanResult &&
                         <Fragment>
-                            <Text style={styles.textTitle1}>Result !</Text>
+                            <Text style={styles.textTitle1}>VOILA !</Text>
                             <View style={ScanResult ? styles.scanCardView : styles.cardView}>
                                 <Text>Type : {result.type}</Text>
                                 <Text>Result : {result.data}</Text>
@@ -102,7 +102,7 @@ class Scan extends Component {
                             onRead={this.onSuccess}
                             topContent={
                                 <Text style={styles.centerText}>
-                                    Go to <Text style={styles.textBold}>wikipedia.org/wiki/QR_code</Text> on your computer and scan the QR code to test.</Text>
+                                    Wait Cam is Loading</Text>
                             }
                             bottomContent={
                                 <View>
